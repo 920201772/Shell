@@ -9,9 +9,7 @@
 import Foundation
 
 #if os(iOS)
-
 import UIKit
-
 #endif
 
 // MARK: - Int
@@ -212,7 +210,6 @@ public extension CGRect {
 }
 
 #if os(iOS)
-
 // MARK: - UIEdgeInsets
 public extension UIEdgeInsets {
     
@@ -226,5 +223,4 @@ public extension UIEdgeInsets {
     }
     
 }
-
 #endif

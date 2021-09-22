@@ -9,20 +9,16 @@
 import Foundation
 
 #if os(iOS)
-
 import UIKit
-
 #endif
 
 public extension String {
     
     #if os(iOS)
-
     /// 计算字符串大小.
     func computeSize(font: UIFont, maxWidth: CGFloat = .greatestFiniteMagnitude, maxHeight: CGFloat = .greatestFiniteMagnitude) -> CGSize {
         self.boundingRect(with: CGSize(width: maxWidth, height: maxHeight), options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil).size
     }
-
     #endif
     
     /// 字符串为空返回占位符.
