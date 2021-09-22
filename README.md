@@ -1,7 +1,8 @@
 # Shell
-A description of this framework.
+- Version: 0.0.1
+- Modify date: 21/09/22
 
 ## Requirements
-- macOS 10.14+
-- Xcode 13.0+
-- Swift 5.5+
+- iOS 12.0+
+- Xcode 12.0+
+- Swift 5.3+
