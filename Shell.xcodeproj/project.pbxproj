@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		8B19837226F0757300599339 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B19837126F0757300599339 /* Shell.swift */; };
-		8B30D0BA26F1932F00AD111E /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0B926F1932F00AD111E /* Date+Format.swift */; };
+		8B30D0BA26F1932F00AD111E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0B926F1932F00AD111E /* Date+Extension.swift */; };
 		8B30D0CE26F2E58300AD111E /* Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0CD26F2E58300AD111E /* Regular.swift */; };
 		8B30D0D726F31C2600AD111E /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0D626F31C2600AD111E /* Net.swift */; };
 		8B30D0DC26F4274A00AD111E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0DB26F4274900AD111E /* String+Extension.swift */; };
 		8B30D0F226F4778800AD111E /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0F126F4778800AD111E /* QRCode.swift */; };
 		8B30D0F426F48B3500AD111E /* Number+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30D0F326F48B3500AD111E /* Number+Transform.swift */; };
+		8B9EAD4C26FC103C004A7120 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9EAD4B26FC103C004A7120 /* String+Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B19836626F0756400599339 /* Shell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B19836A26F0756400599339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B19837126F0757300599339 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
-		8B30D0B926F1932F00AD111E /* Date+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		8B30D0B926F1932F00AD111E /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		8B30D0CD26F2E58300AD111E /* Regular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular.swift; sourceTree = "<group>"; };
 		8B30D0D626F31C2600AD111E /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		8B30D0DB26F4274900AD111E /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8B30D0F126F4778800AD111E /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		8B30D0F326F48B3500AD111E /* Number+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Transform.swift"; sourceTree = "<group>"; };
 		8B30D0F526F56E6000AD111E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B9EAD4B26FC103C004A7120 /* String+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,9 @@
 				8B30D0D626F31C2600AD111E /* Net.swift */,
 				8B30D0CD26F2E58300AD111E /* Regular.swift */,
 				8B30D0F126F4778800AD111E /* QRCode.swift */,
-				8B30D0B926F1932F00AD111E /* Date+Format.swift */,
+				8B30D0B926F1932F00AD111E /* Date+Extension.swift */,
 				8B30D0DB26F4274900AD111E /* String+Extension.swift */,
+				8B9EAD4B26FC103C004A7120 /* String+Format.swift */,
 				8B30D0F326F48B3500AD111E /* Number+Transform.swift */,
 				8B19836A26F0756400599339 /* Info.plist */,
 			);
@@ -151,7 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B30D0CE26F2E58300AD111E /* Regular.swift in Sources */,
-				8B30D0BA26F1932F00AD111E /* Date+Format.swift in Sources */,
+				8B9EAD4C26FC103C004A7120 /* String+Format.swift in Sources */,
+				8B30D0BA26F1932F00AD111E /* Date+Extension.swift in Sources */,
 				8B19837226F0757300599339 /* Shell.swift in Sources */,
 				8B30D0DC26F4274A00AD111E /* String+Extension.swift in Sources */,
 				8B30D0F426F48B3500AD111E /* Number+Transform.swift in Sources */,
