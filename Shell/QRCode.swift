@@ -27,14 +27,8 @@ public enum QRCode {
         scale = (scale * image.extent.width).transform(scale: 0, mode: .plain) / image.extent.width
         image = image.transformed(by: .init(scaleX: scale, y: scale))
         
-        let context = CIContext()
-        guard let cgImage = context.createCGImage(image, from: image.extent) else { throw Error.createImage }
-        
-        guard let destination = CGImageDestinationCreateWithURL(URL(fileURLWithPath: filePath) as CFURL, kUTTypePNG, 1, nil) else {
-            throw Error.url
-        }
-        CGImageDestinationAddImage(destination, cgImage, nil)
-        CGImageDestinationFinalize(destination)
+        guard let colorSpace = CGColorSpace(name: CGColorSpace.sRGB) else { throw Error.sRGB }
+        try CIContext().writePNGRepresentation(of: image, to: .init(fileURLWithPath: filePath), format: .RGBA8, colorSpace: colorSpace, options: [:])
     }
     
 }
@@ -46,16 +40,13 @@ public extension QRCode {
         
         /// 输出二维码图片失败.
         case outputImage
-        /// 创建图片失败.
-        case createImage
-        /// 无效的 URL.
-        case url
+        /// 找不到 sRGB 颜色空间.
+        case sRGB
         
         public var errorDescription: String? {
             switch self {
-            case .url: return "无效的 URL."
             case .outputImage: return "输出二维码图片失败."
-            case .createImage: return "创建图片失败."
+            case .sRGB: return "找不到 sRGB 颜色空间."
             }
         }
         
