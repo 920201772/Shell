@@ -123,7 +123,7 @@ public extension String {
         for (index, char) in self.enumerated().reversed() {
             if char == "/" { return "" }
             if char == "." {
-                return String(self[(index + 1)...])
+                return self[(index + 1)...]
             }
         }
         
@@ -136,6 +136,22 @@ public extension String {
         }
         
         return self
+    }
+
+    var fileName: String {
+        var firstIndex = 0
+        var lastIndex = count
+        for (index, char) in self.enumerated().reversed() {
+            if char == "/" {
+                firstIndex = index + 1
+                break
+            }
+            if char == "." {
+                lastIndex = index
+            }
+        }
+
+        return self[firstIndex..<lastIndex]
     }
     
     var pathDirectory: String {

@@ -12,12 +12,13 @@ public enum Shell {
     public static var environment: [String: String] { ProcessInfo.processInfo.environment }
     public static var currentPath: String {
         let arguments = ProcessInfo.processInfo.arguments
-        let index = arguments.firstIndex(of: "-interpret")! + 1
-        let paths = arguments[index].split(separator: "/")
-        if paths.first != "." && paths.first != ".." {
-            return arguments[index]
+
+        let interpret = arguments[arguments.firstIndex(of: "-interpret")! + 1]
+        if interpret.hasPrefix("/") {
+            return interpret
         }
         
+        let paths = interpret.split(separator: "/")
         var pwd = environment["PWD"]!.split(separator: "/", omittingEmptySubsequences: false)
         paths.forEach {
             if $0 == ".." {
